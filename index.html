@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<HTML lang="FR-fr">
+
+<head>
+    <title>Accueil | El Italiano</title>
+    <link href="F:/GITI/FSWD/FRONT END/PROJETS/PROJET TRIMESTRE 1/Images/favicon.ico" rel="icon" type="image/x-icon"> <!--favicon en drapeau de l'Italie-->
+
+    <meta charset="utf-8"> <!--codage de caractère le plus utilisé-->
+    <meta name="viewport" content="width=device-width" initial-scale="1"> <!--adaptation du format de l'écran en fonction du support-->
+
+    <style>
+        /*----------------LES BASES---------------*/
+
+        /*couleur de fond grisée*/
+        body {
+            background-color: #ebebeb;
+        }
+        
+        /*les titres*/
+        h1 {
+            color: green;
+            font-family: Lucida Calligraphy;
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        h2 {
+            color: green;
+            font-family: Lucida Calligraphy;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        /*les textes*/
+        p {
+            font-family: Gabriola;
+            text-align: justify;
+            font-size: 25px;
+            line-height: 120%;
+        }
+
+        /*---------------LES TABLEAUX---------------*/
+
+        table {
+            width: 100%;
+            /*border-collapse: collapse;
+            border: 1px solid black;*/
+        }
+
+        td {
+            padding: 15px;
+            /*border-collapse: collapse;
+            border: 1px solid black;*/
+        }
+
+        /*----------------LES IMAGES---------------*/
+
+        img{
+            border-radius: 15px;
+            transition: all 1s; /*ajout de transition*/
+        }
+
+        img:hover {
+            transform: scale(1.05); /*grossissement des images lorsque l'on passe au-dessus*/
+        }
+
+        /*---------------LES BOUTONS---------------*/
+
+        /*BOUTONS DANS LA PAGE*/
+        .bouton {
+            border-radius: 10px;
+            background-color: rgb(255, 0, 0);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 1s; /*ajout de transition*/
+        }
+
+        .bouton:hover {
+            transform: scale(1.1); /*grossissement des boutons lorsque l'on passe dessus*/
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        /*BOUTONS DU MENU EN HAUT DE PAGE*/
+
+        /*boutons du menu de navigation*/
+        .bouton_lien {
+            width: 20%;
+            background-color: #ebebeb;
+            text-align: center;
+            font-family: Gabriola;
+            color: rgb(255, 0, 0);
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 1s;
+            
+        }
+
+        /*grossissement de l'écriture lorsque l'on passe dessus*/
+        .bouton_lien:hover {
+            font-size: 40px; 
+        }
+
+        /*menu de navigation collé en haut de page*/
+        div.sticky {
+            height: 100px;
+            position: sticky;
+            top: 0;
+            background-color: #ebebeb;
+        }
+
+        /*---------------PIED DE PAGE---------------*/
+
+        footer {
+            background-color: rgba(255, 46, 46, 0.2);
+            border-radius: 10px;
+        }
+
+        .footer {
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /*---------------LES LIENS----------------*/
+
+        /*Google maps*/
+        iframe{
+            width: 100%;
+            border: 0;
+        }
+
+        /*lien hypertexte */
+        a {
+            text-decoration: none; /* sans soulignement*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--nom du restaurant dans un drapeau italien-->
+    <table>
+        <tr>
+            <td style="background-color: green; width: 33%"></td>
+            <td style="background-color: white; width: 34%">
+                <h1>El Italiano</h1>
+            </td>
+            <td style="background-color: red; width: 33%"></td>
+        </tr>
+    </table>
+    
+    <!--Menu de navigation au centre de la page-->
+    <div class="sticky">
+    <table>
+        <tr>
+            <td width="20%"></td>
+
+            <td width="60%">
+                <table>
+                    <tr>
+                        <td>
+                            <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/index.html" class="bouton_lien">Accueil</a>
+                        </td>
+                        <td>
+                            <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/a_propos.html" class="bouton_lien">A propos</a>
+                        </td>
+                        <td>
+                            <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/notre_restaurant.html" class="bouton_lien">Notre restaurant</a>
+                        </td>
+                        <td>
+                            <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/menu.html" class="bouton_lien">Menu</a>
+                        </td>
+                        <td>
+                            <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/contact.html" class="bouton_lien">Contact</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%"></td>
+        </tr>
+    </table>
+    </div>
+
+    <!--image de la vitrine du restaurant avec un texte sur la droite-->
+    <table>
+        <tr>
+            <!--image du restaurant-->
+            <td width="60%">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/Vitrine du restaurant.png" alt="image de la vitrine du restaurant" width="100%">
+            </td>
+
+            <!--texte de "bienvenue"-->
+            <td width="40%">
+                <h2>Bienvenue</h2>
+
+                <p>Notre restaurant El Italiano vous invite à découvrir une cuisine italienne authentique, préparée avec passion à partir de produits frais et faits maison. <br>
+                   Chaque plat raconte une histoire, celle des saveurs simples et généreuses de l’Italie, sublimées par le savoir-faire de notre chef. 
+                   Pâtes fraîches pétries sur place, pizzas à la pâte fine et croustillante, lasagnes au bon goût de boeuf et burrata fondantes : 
+                   ici, tout est fait maison et servi avec le cœur. Pour accompagner votre repas, notre carte propose une sélection de vins italiens traditionnels. 
+                   Le tout dans un cadre chaleureux, au cœur de Genève, où l’on vient pour bien manger, mais surtout pour passer un bon moment.
+                </p>
+
+                <!--bouton lien vers la page "A propos"-->
+                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/a_propos.html" class="bouton" style="width:100px; position: absolute; right: 16%;">A propos</a>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <!--image de l'intérieur du restaurant à droite, texte sur la gauche , avec bouton lien vers la page "Notre restaurant"-->
+    <table>
+        <tr>
+            <!--texte présentant brièvement le restaurant-->
+            <td width="40%">
+                <h2>L'Italie, notre inspiration</h2>
+
+                <p>Les fondateurs de El Italiano ont grandi en Italie, où la cuisine est avant tout une affaire de famille, de souvenirs et de transmission. 
+                   Guidés par cette tradition, ils ont imaginé un lieu où chaque plat raconte un peu de leur enfance. Ils privilégient le fait maison, 
+                   les pâtes fraîches préparées chaque jour, et sélectionnent avec soin des ingrédients directement auprès de producteurs locaux italiens. 
+                   En cuisine, le chef Antonio perpétue cette passion avec simplicité et exigence, tandis que Giulia, sa femme, assure la direction du restaurant avec la même générosité 
+                   et attention aux détails.
+                </p>
+
+                <!--bouton lien vers la page "Notre Restaurant"-->
+                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/notre_restaurant.html" class="bouton" style="width: 150px; position:absolute; left: 14.5%">Notre restaurant</a>
+            </td>
+
+            <!--image de l'intérieur du restaurant-->
+            <td width="60%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/intérieur restaurant.jfif" alt="image de l'intérieur du restaurant" 
+                    width="700px"
+                    border-radius="15px">
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <!--texte parlant du menu, suivi d'un bouton lien vers la page du menu.
+    Un autre texte des vins servis.
+    Une image d'un plat de pâtes et un verre de vin entre les deux textes-->
+    <table>
+        <tr>
+            <!--texte parlant du menu-->
+            <td width="33%">
+                <h2>Menu à la carte</h2>
+
+                <p>Des entrées aux desserts, chaque plat est préparé avec des produits frais, de saison, et une touche de tradition italienne.
+                   Découvrez notre sélection de recettes de famille, nos pâtes fraîches maison et nos pizzas artisanales, à déguster dans une ambiance chaleureuse et raffinée.
+                </p>
+
+                <!--bouton lien vers la page Menu-->
+                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/menu.html" class="bouton" style="width: 100px; position:absolute; left: 13%">Menu</a>
+            </td>
+
+            <!--image d'un plat de pâtes avec un verre de vin-->
+            <td width="34%">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/plat - Accueil.jfif" alt="Image de plusieurs plats italiens"
+                    width="100%">
+            </td>
+
+            <!--texte présentant les vins-->
+            <td width="33%">
+                <h2>Nos vins Italiens</h2>
+
+                <p>Notre carte des vins met à l’honneur les terroirs de l’Italie. Chaque bouteille est sélectionnée avec soin pour accompagner au mieux nos plats et prolonger le plaisir à table.
+                   Blanc, rouge ou rosé : laissez-vous guider… ou laissez-vous surprendre.
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--bouton retour en haut de page-->
+    <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/index.html" class="bouton"
+       style="width: 150px;
+              position: absolute;
+              right: 50px;">
+        Retour en haut
+    </a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--horaires d'ouvertures à gauche
+    informations de contact à droite-->
+    <footer>
+        <table class="footer">
+            <tr>
+                <td> <h2>Horaires d'ouvertures</h2> </td>
+                <td> <h2>Nous contacter</h2> </td>
+                <td> <h2>Nous trouver</h2> </td>
+            </tr>
+
+            <tr>
+                <!--horaires d'ouvertures-->
+                <td width="33%">
+                    <table>
+                        <tr>
+                            <th>Jours</th>
+                            <th>Midi</th>
+                            <th>Soir</th>
+                        </tr>
+                        <tr>
+                            <td>Lundi</td>
+                            <td>Fermé</td>
+                            <td>Fermé</td>
+                        </tr>
+                        <tr>
+                            <td>Du Mardi au Samedi</td>
+                            <td>11h-15h</td>
+                            <td>19h-23h</td>
+                        </tr>
+                        <tr>
+                            <td>Dimanche</td>
+                            <td>11h-15h</td>
+                            <td>Fermé</td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td width="34%">
+                    <p class="footer">
+                        Téléphone: +33 6 01 23 45 67 <br>
+                        <br>
+                        Mail: <a href="mailto:restaurant@el_italiano.com">restaurant@el_italiano.com</a> <br>
+                        <br>
+
+                        <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/logo facebook.png" alt="Logo Facebook"
+                             width="30px">
+                        <a href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfhYB2e8bSJt0oZFgfvCauIHHjSsFBU_4R1zArvQYM4e_bAJiCcNAgbirv3_MqWZgBAIrqIMOg_E0Jl675DTo35SeBstxHAqrYwYYNpy0oNZ5g&smuh=46804&lh=AdBrCG_mxTiuU3MEgGk" target="_blank">El Italiano</a>
+
+                        <br>
+                        <br>
+
+                        <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/logo instagram.png" alt="Logo Instagram"
+                             width="30px">
+                        <a href="https://www.instagram.com/" target="_blank">El_Italiano</a>
+                    </p>
+                </td>
+
+                <td width="33%">
+                    <p class="footer">
+                        Rue Michel-Roset 2, 1201 Genève, Suisse <br>
+                    </p>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.964781541932!2d6.1434015!3d46.2088691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65264350e589%3A0x224ff2b98b25c027!2sRue%20Michel-Roset%202%2C%201201%20Gen%C3%A8ve%2C%20Suisse!5e0!3m2!1sfr!2sfr!4v1700000000000"
+                        allowfullscreen="1"
+                        loading="lazy"
+                        width="100%"
+                        height="250px">
+                    </iframe>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+    </footer>
+
+</body>

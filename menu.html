@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<HTML lang="FR-fr">
+
+<head>
+    <title>Menu | El Italiano</title>
+    <link href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/favicon.ico" rel="icon" type="image/x-icon"> <!--favicon en drapeau de l'Italie-->
+
+    <meta charset="utf-8"> <!--codage de caractère le plus utilisé-->
+    <meta name="viewport" content="width=device-width" initial-scale="1"> <!--adaptation du format de l'écran en fonction du support-->
+
+    <style>
+        /*---------------LES BASES---------------*/
+
+        /*couleur de fond grisée*/
+        body {
+            background-color: #ebebeb;
+        }
+        
+        /*les titres*/
+        h1 {
+            color: green;
+            font-family: Lucida Calligraphy;
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+        h2 {
+            color: black;
+            font-family: Lucida Calligraphy;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        /*les textes*/
+        p {
+            font-family: Gabriola;
+            text-align: justify;
+            font-size: 25px;
+            line-height: 120%;
+        }  
+        
+        /*nom du plat en gras*/
+        .plat {
+            font-weight: bold;
+        }
+
+        /*description des plats*/
+        .menu {
+            font-size: 22px;
+            margin-top: -7%;
+        }
+
+       /*--------------- LES TABLEAUX ---------------*/
+
+        table {
+            width: 100%;
+            /*border-collapse: collapse;
+            border: 1px solid black;*/
+        }
+
+        td {
+            padding: 15px;
+            /*border-collapse: collapse;
+            border: 1px solid black;*/
+        }
+
+        /*--------------- LES IMAGES ----------------*/
+
+        img{
+            border-radius: 15px;
+            transition: all 1s; /*ajout de transition*/
+        }
+
+        img:hover {
+            transform: scale(1.5); /*grossissement des images lorsque l'on passe au-dessus*/
+        }
+
+        /*--------------- LES BOUTONS ---------------*/
+
+        /*BOUTONS DANS LA PAGE*/
+        .bouton {
+            border-radius: 10px;
+            background-color: rgb(255, 0, 0);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 1s; /*ajout de transition*/
+        }
+
+        .bouton:hover {
+            transform: scale(1.1); /*grossissement des boutons lorsque l'on passe dessus*/
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        /*BOUTONS DU MENU DE NAVIGATION*/
+        .bouton_lien {
+            width: 20%;
+            background-color: #ebebeb;
+            text-align: center;
+            font-family: Gabriola;
+            color: rgb(255, 0, 0);
+            font-size: 30px;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        /*grossissement de l'écriture lorsque l'on passe dessus*/
+        .bouton_lien:hover {
+            font-size: 40px;
+        }
+
+        /*menu de navigation collé en haut de page*/
+        div.sticky {
+            height: 100px;
+            position: sticky;
+            top: 0;
+            background-color: #ebebeb;
+        }
+
+        /*---------------PIED DE PAGE---------------*/
+
+        footer {
+            background-color: rgba(255, 46, 46, 0.2);
+            border-radius: 10px;
+        }
+
+        .footer {
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /*---------------LES LIENS----------------*/
+
+        /*Google maps*/
+        iframe{
+            width: 100%;
+            border: 0;
+        }
+
+        /*lien hypertexte */
+        a {
+            text-decoration: none; /* sans soulignement*/
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--nom du restaurant dans un drapeau italien-->
+    <table>
+        <tr>
+            <td style="background-color: green; width: 33%"></td>
+            <td style="background-color: white; width: 34%">
+                <h1>El Italiano</h1>
+            </td>
+            <td style="background-color: red; width: 33%"></td>
+        </tr>
+    </table>
+    
+    <!--Menu de navigation au centre de la page-->
+    <div class="sticky">
+    <table>
+        <tr>
+            <td width="20%"></td>
+
+            <td width="60%">
+                <table>
+                    <tr>
+                        <td>
+                            <p>
+                                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/index.html" class="bouton_lien">Accueil</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/a_propos.html" class="bouton_lien">A propos</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/notre_restaurant.html" class="bouton_lien">Notre restaurant</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/menu.html" class="bouton_lien">Menu</a>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/contact.html" class="bouton_lien">Contact</a>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td width="20%"></td>
+        </tr>
+    </table>
+    </div>
+
+    <br>
+    <br>
+
+
+    <!--Menu: 
+    à gauche les entrées puis les desseerts
+    à droite les plats (pizza et pâtes)
+    en dessous de tout, les vins-->
+
+    <table> <!--chaque ligne sera composée de la façon suivante: un plat, une image, un plat, une image-->
+        <tr>
+            <td width="50%">
+                <h2>Entrées</h2>
+            </td>
+            
+            <td width="50%">
+                <h2>Pâtes</h2>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr> <!--ligne carpaccio et spaghettis carbonara-->
+            <td width="25%">
+                <p class="plat">Carpaccio de bresaola au pesto 15,- CHF</p>
+                <p class="menu">Bresaola, pesto, roquette, huile d'olive</p> 
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/carpaccio.png"  alt="Image de carpaccio"
+                     width="200px">
+            </td>
+
+            <td width="25%">
+                <p class="plat">Raviolis aux fruits de mer 25,- CHF</p>
+                <p class="menu">Raviolis, crevettes, moules, saumon, tomates</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/raviolis.png" alt="Image de raviolis de fruits de mer"
+                     width="200px">
+            </td>
+        </tr>
+
+        <tr> <!--ligne salade et tagliatelles à la truffe-->
+            <td width="25%">
+                <p class="plat">Salade italienne 12,- CHF</p>
+                <p class="menu">Tomates cerises, roquette, mozzarella di buffala, olives noires, jambon de Parme, poivrons rouges, concombres, huile d'olive</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/salade italienne.png" alt="Image de la salade italienne"
+                     width="200px">
+            </td>
+
+            <td>
+                <p class="plat">Tagliatelles à la truffe noire 35,- CHF</p>
+                <p class="menu">Tagliatelles, truffe noire, crème fraîche, parmesan râpé, huile d'olive</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/tagliatelles à la truffe.png" alt="Image de tagliattelles à la truffe noire"
+                     width="200px">
+            </td>
+        </tr>
+
+        <tr> <!--ligne bruschetta et lasagnes-->
+            <td>
+                <p class="plat">Bruschetta 10,- CHF</p>
+                <p class="menu">Pain de campagne, mozzarella di buffala, tomate, basilic, huile d'olive</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/bruschetta.png" alt="Image de la bruschetta"
+                     width="200px">
+            </td>
+
+            <td>
+                <p class="plat">Lasagnes 28,- CHF</p>
+                <p class="menu">Lasagne, sauce tomate, béchamel, parmesan, boeuf</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/lasagnes.png" alt="Image de lasagnes"
+                     width="200px">
+            </td>
+        </tr>
+    </table>
+
+    <table> <!--chaque ligne sera composée de la façon suivante: un plat, une image, un plat, une image-->
+        <tr>
+            <td width="50%">
+                <h2>Desserts</h2>
+            </td>
+            
+            <td width="50%">
+                <h2>Pizzas</h2>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr> <!--ligne tiramisu et calzone-->
+            <td width="25%">
+                <p class="plat">Tiramisu</p>
+                <p class="menu">Mascarpone, biscuit, café, cacao en poudre</p> 
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/tiramisu.png" alt="Image du tiramisu"
+                     width="200px">
+            </td>
+
+            <td width="25%">
+                <p class="plat">Calzone 15,- CHF</p>
+                <p class="menu">Jambon, mozzarella di buffala, sauce tomate, oeuf</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/pizza calzone.png" alt="Image de la pizza Calzone"
+                     width="200px">
+            </td>
+        </tr>
+    
+        <tr> <!--ligne panna cotta et margherita-->
+            <td width="25%">
+                <p class="plat">Panna cotta aux fruits rouges</p>
+                <p class="menu">crème liquide, lait, gélatine, vanille, coulis de fruits rouges</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/panna cotta.png" alt="Image de la panna cotta aux fruits rouges"
+                     width="200px">
+            </td>
+
+            <td>
+                <p class="plat">Margherita 15,- CHF</p>
+                <p class="menu">Sauce tomate, mozzarella di buffala, basilic, huile d'olive</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/pizza margherita.png" alt="Image de la pizza Margherita"
+                     width="200px">
+            </td>
+        </tr>
+
+        <tr> <!--ligne panettone et pizza 4 fromages-->
+            <td>
+                <p class="plat">Panettone aux raisins</p>
+                <p class="menu">extrait de vanille, raisins secs, citron, farine, oeuf</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/panettone.png" alt="Image du panettone aux raisins"
+                    width="200px">
+            </td>
+
+            <td>
+                <p class="plat">4 fromages 12,- CHF</p>
+                <p class="menu">Sauce tomate, mozzarella di buffala, ricotta, gorgonzola, parmesan, huile d'olive</p>
+            </td>
+
+            <td width="25%" align="center">
+                <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/pizza 4 fromages.png" alt="Image de la pizza 4 fromages"
+                     width="200px">
+            </td>
+        </tr>
+    </table>
+
+    </table>
+
+    <table>
+        <tr> <!--ligne des vins-->
+            <h2>Vins</h2>
+        </tr>
+
+        <tr>
+            <td width="33%"> <!--colonne des vins blancs-->
+                <h2>Blancs</h2>
+
+                <p class="plat">Pinot Grigio 10,- CHF</p>
+                <p class="menu">Région Collio; saveur de pomme, poire et agrumes</p>
+
+                <p class="plat">Sauvignon Toscan 17,- CHF</p>
+                <p class="menu">Région Napa Valley; saveur de nectarine, pêche blanche, miel et citron</p>
+
+                <p class="plat">Soave Classico 14,- CHF</p>
+                <p class="menu">Région Vénétie; saveur minérale, zestée et florale</p>
+            </td>
+
+            <td width="34%"> <!--colonne des vins rouges-->
+                <h2>Rouges</h2>
+
+                <p class="plat">Bovale Isola dei Nuraghi 14,- CHF</p>
+                <p class="menu">Région Sardaigne; saveur de fruits noirs, cacao et épices</p>
+
+                <p class="plat">Brunello di Montalcino 40,- CHF</p>
+                <p class="menu">Région Toscane; saveur fraîche aux notes intenses de fruits rouges et noirs</p>
+
+                <p class="plat">Cannonau di Sardegna 21,- CHF</p>
+                <p class="menu">Région Sardaigne; saveur complexe de fruits rouges mûrs, épices et sous-bois</p>
+            </td>
+
+            <td width="33%"> <!--colonne des vins rosés-->
+                <h2>Rosés</h2>
+
+                <p class="plat">Cerasuolo d'Abruzzo 15,- CHF</p>
+                <p class="menu">Région Abruzzes; saveur fraîche de fraise et cerise</p>
+
+                <p class="plat">Negroamaro Il Pumo Rosato 10,- CHF</p>
+                <p class="menu">Région Pouilles; saveur de cerise, rose et grenade</p>
+
+                <p class="plat">Pinot Grigio Rosato 10,- CHF</p>
+                <p class="menu">Région Trentin; saveur florale et notes d'agrumes</p>
+            </td>
+        </tr>
+    </table>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--bouton retour en haut de page-->
+    <a href="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/menu.html" class="bouton"
+       style="width: 150px;
+              position: absolute;
+              right: 50px;">
+        Retour en haut
+    </a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!--horaires d'ouvertures à gauche
+    informations de contact à droite-->
+    <footer>
+        <table class="footer">
+            <tr>
+                <td> <h2>Horaires d'ouvertures</h2> </td>
+                <td> <h2>Nous contacter</h2> </td>
+                <td> <h2>Nous trouver</h2> </td>
+            </tr>
+
+            <tr>
+                <!--horaires d'ouvertures-->
+                <td width="33%">
+                    <table>
+                        <tr>
+                            <th>Jours</th>
+                            <th>Midi</th>
+                            <th>Soir</th>
+                        </tr>
+                        <tr>
+                            <td>Lundi</td>
+                            <td>Fermé</td>
+                            <td>Fermé</td>
+                        </tr>
+                        <tr>
+                            <td>Du Mardi au Samedi</td>
+                            <td>11h-15h</td>
+                            <td>19h-23h</td>
+                        </tr>
+                        <tr>
+                            <td>Dimanche</td>
+                            <td>11h-15h</td>
+                            <td>Fermé</td>
+                        </tr>
+                    </table>
+                </td>
+
+                <td width="34%">
+                    <p class="footer">
+                        Téléphone: +33 6 01 23 45 67 <br>
+                        <br>
+                        Mail: <a href="mailto:restaurant@el_italiano.com">restaurant@el_italiano.com</a> <br>
+                        <br>
+
+                        <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/logo facebook.png" alt="Logo Facebook"
+                             width="30px">
+                        <a href="https://www.facebook.com/?stype=lo&flo=1&deoia=1&jlou=AfhYB2e8bSJt0oZFgfvCauIHHjSsFBU_4R1zArvQYM4e_bAJiCcNAgbirv3_MqWZgBAIrqIMOg_E0Jl675DTo35SeBstxHAqrYwYYNpy0oNZ5g&smuh=46804&lh=AdBrCG_mxTiuU3MEgGk" target="_blank">El Italiano</a>
+
+                        <br>
+                        <br>
+
+                        <img src="F:/GITI/FSWD/FRONT_END/projets/projet_trimestre_1/Images/logo instagram.png" alt="Logo Instagram"
+                             width="30px">
+                        <a href="https://www.instagram.com/" target="_blank">El_Italiano</a>
+                    </p>
+                </td>
+
+                <td width="33%">
+                    <p class="footer">
+                        Rue Michel-Roset 2, 1201 Genève, Suisse <br>
+                    </p>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.964781541932!2d6.1434015!3d46.2088691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c65264350e589%3A0x224ff2b98b25c027!2sRue%20Michel-Roset%202%2C%201201%20Gen%C3%A8ve%2C%20Suisse!5e0!3m2!1sfr!2sfr!4v1700000000000"
+                        allowfullscreen="1"
+                        loading="lazy"
+                        width="100%"
+                        height="250px">
+                    </iframe>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+
+    </footer>
+
+</body>
